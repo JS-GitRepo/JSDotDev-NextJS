@@ -1,4 +1,4 @@
-@import "globals.css";
+@import "ThemeVariables.css";
 
 /* - - - RESETS - - -*/
 .Header h1,
@@ -24,13 +24,18 @@
 	/* Style */
 	background-color: var(--softWhite);
 	text-decoration: none;
-	font-family: "munro";
+	font-family: var(--munro);
 }
 
 .Header h1 {
 	font-size: 24px;
 	font-weight: 200;
 	margin: 2px 0px;
+}
+
+.Header h2 {
+	font-size: 26px;
+	font-weight: 200;
 }
 
 .Header a {
@@ -46,6 +51,18 @@
 
 .Header .project-nav-ctr {
 	display: none;
+}
+
+.Header .project-left {
+	margin: 0px 10px;
+	transform: rotate(90deg);
+	font-size: 20px;
+}
+
+.Header .project-right {
+	margin: 0px 10px;
+	transform: rotate(-90deg);
+	font-size: 20px;
 }
 
 .Header .nav-category-ctr {

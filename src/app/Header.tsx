@@ -30,7 +30,7 @@ const Header = ({}: Props) => {
 	const [subEmoji, setSubEmoji] = useState<string>(" 🙂");
 	// Some elements in the return will be hidden by media query CSS, to allow UI elements in the header or footer depending on mobile / Desktop. This is why there are some "redundant" elements
 	return (
-		<header className={"Header"}>
+		<header className={`Header`}>
 			<Link className="title-ctr" href={"/landing"}>
 				<h1>
 					{`${isIntro ? "who is " : ""}`}
@@ -51,9 +51,9 @@ const Header = ({}: Props) => {
 
 			<div className="project-nav-ctr">
 				<div className="project-nav">
-					<span className="material-symbols-outlined">chevron_left</span>
+					<span className="project-left">v</span>
 					<h2>{allParams[3]}</h2>
-					<span className="material-symbols-outlined">chevron_right</span>
+					<span className="project-right"> v</span>
 				</div>
 
 				<div className="nav-ctr">

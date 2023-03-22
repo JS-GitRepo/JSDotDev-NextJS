@@ -1,9 +1,9 @@
 @import "ThemeVariables.css";
 
-@font-face {
+/* @font-face {
 	font-family: "munro";
 	src: url("../img/munro/munro.ttf");
-}
+} */
 
 :root {
 	font-smooth: never;
@@ -54,7 +54,7 @@ a {
 }
 
 .emoji {
-	font-family: "Noto Emoji", sans-serif;
+	font-family: var(--noto-emoji);
 	font-style: normal;
 }
 
