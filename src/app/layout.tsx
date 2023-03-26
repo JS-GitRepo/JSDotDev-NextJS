@@ -1,6 +1,7 @@
 import { noto_emoji, munro } from "./fonts";
 import Header from "@/app/Header";
 import "./globals.css";
+import { AppContextProvider } from "./context/AppContext";
 
 export const metadata = {
 	title: "jakesnyder.dev",
@@ -12,12 +13,16 @@ export default function RootLayout({
 }: {
 	children: React.ReactNode;
 }) {
+	// - - - - - BG TRANSITION - - - - -
+
 	return (
 		<html lang="en" className={`${noto_emoji.variable} ${munro.variable}`}>
-			<body>
-				<Header />
-				{children}
-			</body>
+			<AppContextProvider>
+				<body>
+					<Header />
+					{children}
+				</body>
+			</AppContextProvider>
 		</html>
 	);
 }

@@ -2,8 +2,10 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import "./Header.css";
+import { animated } from "react-spring";
+import { AppContext } from "./context/AppContext";
 
 interface Props {}
 
@@ -28,6 +30,7 @@ const Header = ({}: Props) => {
 	const [isIntro, setIsIntro] = useState<boolean>(false);
 	const [subtitle, setSubtitle] = useState<string>("Welcome! ");
 	const [subEmoji, setSubEmoji] = useState<string>(" 🙂");
+	const { hueRotation } = useContext(AppContext);
 	// Some elements in the return will be hidden by media query CSS, to allow UI elements in the header or footer depending on mobile / Desktop. This is why there are some "redundant" elements
 	return (
 		<header className={`Header`}>
@@ -38,10 +41,10 @@ const Header = ({}: Props) => {
 						jake
 						{`${isIntro ? "?" : "'s"} `}
 					</span>
-					<span className="highlighted-link hue-rotation">
+					<animated.span style={hueRotation} className="highlighted-link">
 						{isIntro ? "" : `${allParams[2]}`}
 						{isIntro ? "" : ` ${allParams[1]}`}
-					</span>
+					</animated.span>
 				</h1>
 				<p className="subtitle">
 					{subtitle}

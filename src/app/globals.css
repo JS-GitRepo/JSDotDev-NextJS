@@ -1,10 +1,5 @@
 @import "ThemeVariables.css";
 
-/* @font-face {
-	font-family: "munro";
-	src: url("../img/munro/munro.ttf");
-} */
-
 :root {
 	font-smooth: never;
 	-webkit-font-smoothing: none;
